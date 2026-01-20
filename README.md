@@ -70,29 +70,45 @@ $ mau deploy
 
 With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
 
-## Resources
+# NestJS Database Seeder
 
-Check out a few resources that may come in handy when working with NestJS:
+A NestJS application with TypeORM database seeding functionality using `nestjs-seeder` and `@faker-js/faker` to generate realistic test data for Users, Products, and Orders with Many-to-Many relationships.
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+## 📋 Table of Contents
 
-## Support
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Environment Setup](#environment-setup)
+- [Database Schema](#database-schema)
+- [Running the Seeder](#running-the-seeder)
+- [Project Structure](#project-structure)
+- [How It Works](#how-it-works)
+- [Available Scripts](#available-scripts)
+- [Troubleshooting](#troubleshooting)
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## ✨ Features
 
-## Stay in touch
+- **Automated Database Seeding** with fake but realistic data
+- **TypeORM Integration** with PostgreSQL
+- **Entity Relationships**:
+  - Users → Orders (One-to-Many)
+  - Orders → Products (Many-to-Many with join table)
+- **Faker.js Integration** for generating random data
+- **Batch Processing** to handle large datasets efficiently
+- **Environment Configuration** using `.env`
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## 🔧 Prerequisites
 
-## License
+- Node.js (v18 or higher)
+- PostgreSQL database
+- npm or yarn
+
+## 📦 Installation
+
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd shukhee-seeder
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
